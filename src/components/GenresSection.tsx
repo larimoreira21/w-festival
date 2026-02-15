@@ -1,0 +1,113 @@
+import { useRef } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
+import appleAds from '../assets/ads/airpods.png';
+import pop from '../assets/genres/genre-pop.png';
+import rock from '../assets/genres/genre-rock.png';
+import funk from '../assets/genres/genre-funk.png';
+
+const genres = [
+  { name: 'Rock', color: 'bg-blue-800', url: rock },
+  { name: 'Pop', color: 'bg-green-800', url: pop },
+  { name: 'Funk', color: 'bg-purple-900', url: funk },
+  { name: 'Rock', color: 'bg-blue-800', url: rock },
+  { name: 'Pop', color: 'bg-green-800', url: pop },
+  { name: 'Funk', color: 'bg-purple-900', url: funk },
+];
+
+export function GenresSection() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const { clientWidth } = scrollRef.current;
+      const scrollAmount = clientWidth * 0.8;
+      scrollRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  return (
+    <section className="px-3 sm:px-4 lg:px-8 py-6 sm:py-8 flex flex-col lg:flex-row gap-6">
+      <div className="flex-shrink-0 w-full lg:w-48 flex flex-col py-2">
+        <div>
+          <h2 className="text-xl sm:text-2xl font-bold text-foreground leading-tight">
+            Festival for you
+          </h2>
+          <p className="text-sm mt-3">
+            Explore your favorite genres and discover new rhythms to love!
+          </p>
+        </div>
+        <button className="mt-4 w-[96px] h-[32px] !bg-primary !text-white !rounded-full text-xs font-medium !border-none shadow-lg flex items-center justify-center">
+          <span className="whitespace-nowrap">See all</span>
+        </button>
+      </div>
+
+      <div className="relative flex-1 min-w-0 group">
+        <div
+          ref={scrollRef}
+          className="flex gap-4 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory"
+        >
+          {genres.slice(0, 2).map((genre) => (
+            <GenreCard key={genre.name} genre={genre} />
+          ))}
+
+          <div className="flex-shrink-0 w-[440px] h-[208px] min-w-[440px] min-h-[208px] box-content bg-black rounded-xl overflow-hidden border border-border relative snap-center">
+            <img
+              src={appleAds}
+              alt="Airpods Ads"
+              className="w-full h-full object-contain"
+            />
+          </div>
+
+          {genres.slice(2).map((genre) => (
+            <GenreCard key={genre.name} genre={genre} />
+          ))}
+        </div>
+
+        <button
+          onClick={() => scroll('left')}
+          className="absolute left-2 top-1/2 -translate-y-1/2 z-20
+          bg-secondary/40 backdrop-blur-md p-3 rounded-full shadow-xl
+          hidden lg:flex items-center justify-center
+          opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0
+          transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]
+          hover:bg-secondary/80 hover:scale-110 active:scale-95"
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+        <button
+          onClick={() => scroll('right')}
+          className="absolute right-2 top-1/2 -translate-y-1/2 z-20
+             bg-secondary/40 backdrop-blur-md p-3 rounded-full shadow-xl
+             hidden lg:flex items-center justify-center
+             opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0
+             transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]
+             hover:bg-secondary/80 hover:scale-110 active:scale-95"
+        >
+          <ChevronRight className="w-5 h-5" />
+        </button>
+      </div>
+    </section>
+  );
+}
+
+function GenreCard({
+  genre,
+}: {
+  genre: { name: string; color: string; url: string };
+}) {
+  return (
+    <div
+      className={`${genre.color} flex-shrink-0 w-[208px] h-[208px] rounded-xl p-5 aspect-square sm:aspect-[4/3] flex flex-col justify-end cursor-pointer hover:brightness-110 transition-all snap-center relative overflow-hidden group`}
+    >
+      <img
+        src={genre.url}
+        alt={genre.name}
+        className="absolute inset-0 object-cover h-full w-full group-hover/item:scale-110 transition-transform duration-500"
+      />
+    </div>
+  );
+}

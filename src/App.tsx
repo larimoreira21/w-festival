@@ -3,6 +3,7 @@ import './index.css';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { LineUpSection } from './components/LineUpSection';
+import { GenresSection } from './components/GenresSection';
 
 import alok from './assets/card-alok.png';
 import avril from './assets/card-avril.png';
@@ -55,6 +56,9 @@ function App() {
 
       <div className="pt-14 w-full">
         <LineUpSection artists={artistsLineUp} hasSponsor title="Line Up" />
+
+        <GenresSection />
+
         <LineUpSection
           artists={artistYesterday}
           hasSponsor={false}
