@@ -2,6 +2,7 @@ import './index.css';
 
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
+import { LiveSection } from './components/LiveSection';
 import { LineUpSection } from './components/LineUpSection';
 import { GenresSection } from './components/GenresSection';
 import { SponsorBanner } from './components/SponsorBanner';
@@ -93,6 +94,8 @@ function App() {
         <GenresSection />
 
         <SponsorBanner bannerData={firstBanner} />
+
+        <LiveSection />
 
         <LineUpSection
           artists={artistYesterday}
