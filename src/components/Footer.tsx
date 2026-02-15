@@ -36,9 +36,9 @@ export function Footer() {
 
         <div className="flex flex-col gap-3 sm:gap-4">
           <div className="flex items-center gap-3 sm:gap-4">
-            {socialMedia.map((media) => {
-              return (
+            {socialMedia.map((media) => (
                 <button
+                  key={media.name}
                   aria-label={media.name}
                   className="opacity-70 hover:opacity-100 transition-opacity"
                 >
@@ -48,8 +48,7 @@ export function Footer() {
                     className="h-[24px] object-cover group-hover/card:scale-105 transition-transform duration-500"
                   />
                 </button>
-              );
-            })}
+            ))}
           </div>
           <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-sm sm:text-sm">
             <button className="hover:text-orange-500">

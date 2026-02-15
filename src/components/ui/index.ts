@@ -7,3 +7,6 @@ export { DropdownButton } from './DropdownButton';
 export { Card } from './Card';
 
 export { CardMedia } from './CardMedia';
+
+export { HorizontalScrollSection } from './HorizontalScrollSection';
+export type { HorizontalScrollItem } from './HorizontalScrollSection';
