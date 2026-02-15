@@ -8,19 +8,19 @@ import { GenresSection } from './components/GenresSection';
 import { SponsorBanner } from './components/SponsorBanner';
 import { ExclusiveContent } from './components/ExclusiveContent';
 
-import alok from './assets/card-alok.png';
-import avril from './assets/card-avril.png';
-import ritaOra from './assets/card-rita.png';
-import duaLipa from './assets/card-dualipa.png';
+import alok from './assets/cards/card-alok.png';
+import avril from './assets/cards/card-avril.png';
+import ritaOra from './assets/cards/card-rita.png';
+import duaLipa from './assets/cards/card-dualipa.png';
 import cocacola from './assets/ads/coca-cola.png';
 import heineken from './assets/ads/heineken.png';
-import maneskin from './assets/card-maneskin.png';
-import coldplay from './assets/card-coldplay.png';
-import dreamTheater from './assets/card-dream.png';
-import offspring from './assets/card-offspring.png';
-import marshmello from './assets/card-marshmello.png';
-import ironMaiden from './assets/card-ironmaiden.png';
-import blackPantera from './assets/card-blackpanthera.png';
+import maneskin from './assets/cards/card-maneskin.png';
+import coldplay from './assets/cards/card-coldplay.png';
+import dreamTheater from './assets/cards/card-dream.png';
+import offspring from './assets/cards/card-offspring.png';
+import marshmello from './assets/cards/card-marshmello.png';
+import ironMaiden from './assets/cards/card-ironmaiden.png';
+import blackPantera from './assets/cards/card-blackpanthera.png';
 
 const artistsLineUp = [
   { name: 'Iron Maiden', image: ironMaiden },
