@@ -2,6 +2,7 @@ import './index.css';
 
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
+import { LivePlayer } from './components/LivePlayer';
 import { LiveSection } from './components/LiveSection';
 import { LineUpSection } from './components/LineUpSection';
 import { GenresSection } from './components/GenresSection';
@@ -90,6 +91,8 @@ function App() {
       <Navbar />
 
       <div className="pt-14 w-full">
+        <LivePlayer />
+
         <LineUpSection artists={artistsLineUp} hasSponsor title="Line Up" />
 
         <GenresSection />
