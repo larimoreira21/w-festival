@@ -6,6 +6,7 @@ import { LiveSection } from './components/LiveSection';
 import { LineUpSection } from './components/LineUpSection';
 import { GenresSection } from './components/GenresSection';
 import { SponsorBanner } from './components/SponsorBanner';
+import { ExclusiveContent } from './components/ExclusiveContent';
 
 import alok from './assets/card-alok.png';
 import avril from './assets/card-avril.png';
@@ -102,6 +103,8 @@ function App() {
           hasSponsor={false}
           title="Yesterday Shows"
         />
+
+        <ExclusiveContent />
 
         <LineUpSection
           artists={artistRockSingers}
