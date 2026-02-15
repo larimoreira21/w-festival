@@ -8,6 +8,8 @@ import {
   Grid2X2,
 } from 'lucide-react';
 
+import { Button, DropdownButton } from './ui';
+
 import avrilVideo from '../assets/videos/avril-lavigne.mp4';
 
 const PLAYBACK_SPEEDS = [1, 1.25, 1.5, 1.75, 2] as const;
@@ -136,58 +138,45 @@ export function LivePlayer() {
 
       <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between z-10 pointer-events-none">
         <div className="pointer-events-auto">
-          <button
-            type="button"
-            className="flex items-center gap-2 !bg-accent hover:!bg-accent-hover !text-white !rounded-full px-4 py-2 text-xs font-medium !border-none shadow-lg transition-colors transition-transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-black"
+          <Button
+            variant="primary"
+            icon={<Camera className="shrink-0" aria-hidden />}
           >
-            <Camera className="w-4 h-4 shrink-0" aria-hidden />
-            <span className="whitespace-nowrap">Choose your camera</span>
-          </button>
+            Choose your camera
+          </Button>
         </div>
 
         <div className="flex items-center gap-1 pointer-events-auto">
-          <button
-            type="button"
+          <Button
+            variant="ghost"
             onClick={togglePictureInPicture}
-            className="!bg-white/10 hover:!bg-white/20 text-white/90 hover:!text-white transition-colors p-2 rounded-lg backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-white/50"
             aria-label="Picture in picture"
-          >
-            <Grid2X2 className="w-4 h-4" aria-hidden />
-          </button>
+            icon={<Grid2X2 aria-hidden />}
+          />
 
-          <button
-            type="button"
+          <Button
+            variant="ghost"
             onClick={toggleFullscreen}
-            className="!bg-white/10 hover:!bg-white/20 text-white/90 hover:!text-white transition-colors p-2 rounded-lg backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-white/50"
             aria-label="Fullscreen"
-          >
-            <Maximize2 className="w-4 h-4" aria-hidden />
-          </button>
+            icon={<Maximize2 aria-hidden />}
+          />
 
-          <button
-            type="button"
+          <Button
+            variant="ghost"
             onClick={toggleMute}
-            className="!bg-white/10 hover:!bg-white/20 text-white/90 hover:!text-white transition-colors p-2 rounded-lg backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-white/50"
             aria-label={isMuted ? 'Unmute' : 'Mute'}
-          >
-            {isMuted ? (
-              <VolumeX className="w-4 h-4" aria-hidden />
-            ) : (
-              <Volume2 className="w-4 h-4" aria-hidden />
-            )}
-          </button>
+            icon={isMuted ? <VolumeX aria-hidden /> : <Volume2 aria-hidden />}
+          />
 
           <div className="relative">
-            <button
-              type="button"
+            <Button
+              variant="ghost"
               onClick={() => setShowSpeedMenu((speedMenu) => !speedMenu)}
-              className="!bg-white/10 hover:!bg-white/20 text-white/90 hover:!text-white transition-colors p-2 rounded-lg backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-white/50"
               aria-label="Playback speed"
               aria-expanded={showSpeedMenu}
               aria-haspopup="listbox"
-            >
-              <Settings className="w-4 h-4" aria-hidden />
-            </button>
+              icon={<Settings aria-hidden />}
+            />
 
             {showSpeedMenu && (
               <>
@@ -207,17 +196,12 @@ export function LivePlayer() {
                       role="option"
                       aria-selected={playbackSpeed === speed}
                     >
-                      <button
-                        type="button"
+                      <DropdownButton
+                        isSelected={playbackSpeed === speed}
                         onClick={() => applySpeed(speed)}
-                        className={`w-full text-left px-3 py-1.5 text-xs text-white hover:bg-white/10 focus:bg-white/10 focus:outline-none ${
-                          playbackSpeed === speed
-                            ? 'bg-primary/30 text-primary-foreground'
-                            : ''
-                        }`}
                       >
                         {speed}x
-                      </button>
+                      </DropdownButton>
                     </li>
                   ))}
                 </ul>

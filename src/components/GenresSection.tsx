@@ -1,6 +1,8 @@
 import { useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
+import { Button } from './ui';
+
 import appleAds from '../assets/ads/airpods.png';
 import pop from '../assets/genres/genre-pop.png';
 import rock from '../assets/genres/genre-rock.png';
@@ -40,9 +42,9 @@ export function GenresSection() {
             Explore your favorite genres and discover new rhythms to love!
           </p>
         </div>
-        <button className="mt-4 w-[96px] h-[32px] !bg-accent hover:!bg-accent-hover !text-white !rounded-full text-xs font-medium !border-none shadow-lg flex items-center justify-center transition-colors transition-transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-black">
-          <span className="whitespace-nowrap">See all</span>
-        </button>
+        <Button variant="primaryCompact" className="mt-4">
+          See all
+        </Button>
       </div>
 
       <div className="relative flex-1 min-w-0 group">
@@ -67,28 +69,18 @@ export function GenresSection() {
           ))}
         </div>
 
-        <button
+        <Button
+          variant="scrollArrow"
           onClick={() => scroll('left')}
-          className="absolute left-2 top-1/2 -translate-y-1/2 z-20
-          bg-secondary/40 backdrop-blur-md p-3 rounded-full shadow-xl
-          hidden lg:flex items-center justify-center
-          opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0
-          transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]
-          hover:bg-secondary/80 hover:scale-110 active:scale-95"
-        >
-          <ChevronLeft className="w-5 h-5" />
-        </button>
-        <button
+          aria-label="Scroll left"
+          icon={<ChevronLeft className="w-5 h-5" />}
+        />
+        <Button
+          variant="scrollArrowRight"
           onClick={() => scroll('right')}
-          className="absolute right-2 top-1/2 -translate-y-1/2 z-20
-             bg-secondary/40 backdrop-blur-md p-3 rounded-full shadow-xl
-             hidden lg:flex items-center justify-center
-             opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0
-             transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]
-             hover:bg-secondary/80 hover:scale-110 active:scale-95"
-        >
-          <ChevronRight className="w-5 h-5" />
-        </button>
+          aria-label="Scroll right"
+          icon={<ChevronRight className="w-5 h-5" />}
+        />
       </div>
     </section>
   );
