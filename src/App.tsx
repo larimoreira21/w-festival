@@ -1,6 +1,52 @@
+import './index.css';
+
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
-import './index.css';
+import { LineUpSection } from './components/LineUpSection';
+
+import alok from './assets/card-alok.png';
+import avril from './assets/card-avril.png';
+import ritaOra from './assets/card-rita.png';
+import duaLipa from './assets/card-dualipa.png';
+import maneskin from './assets/card-maneskin.png';
+import coldplay from './assets/card-coldplay.png';
+import dreamTheater from './assets/card-dream.png';
+import offspring from './assets/card-offspring.png';
+import marshmello from './assets/card-marshmello.png';
+import ironMaiden from './assets/card-ironmaiden.png';
+import blackPantera from './assets/card-blackpanthera.png';
+
+const artistsLineUp = [
+  { name: 'Iron Maiden', image: ironMaiden },
+  { name: 'Alok', image: alok },
+  { name: 'Rita Ora', image: ritaOra },
+  { name: 'Dream Theater', image: dreamTheater },
+];
+
+const artistYesterday = [
+  { name: 'Marshmello', image: marshmello },
+  { name: 'Alok', image: alok },
+  { name: 'Rita Ora', image: ritaOra },
+  { name: 'Dream Theater', image: dreamTheater },
+  { name: 'Dua Lipa', image: duaLipa },
+  { name: 'Maneskin', image: maneskin },
+];
+
+const artistRockSingers = [
+  { name: 'Dream', image: dreamTheater },
+  { name: 'Maneskin', image: maneskin },
+  { name: 'Coldplay', image: coldplay },
+  { name: 'Offspring', image: offspring },
+  { name: 'Avril', image: avril },
+  { name: 'Black Pantera', image: blackPantera },
+];
+
+const artistWatch = [
+  { name: 'Alok', image: alok },
+  { name: 'Rita oRA', image: ritaOra },
+  { name: 'Dua Lipa', image: duaLipa },
+  { name: 'Maneskin', image: maneskin },
+];
 
 function App() {
   return (
@@ -8,6 +54,20 @@ function App() {
       <Navbar />
 
       <div className="pt-14 w-full">
+        <LineUpSection artists={artistsLineUp} hasSponsor title="Line Up" />
+        <LineUpSection
+          artists={artistYesterday}
+          hasSponsor={false}
+          title="Yesterday Shows"
+        />
+
+        <LineUpSection
+          artists={artistRockSingers}
+          hasSponsor={false}
+          title="Rock Singers"
+        />
+
+        <LineUpSection artists={artistWatch} hasSponsor title="Watch Again" />
         <Footer />
       </div>
     </main>
