@@ -10,7 +10,7 @@ import alok from './assets/card-alok.png';
 import avril from './assets/card-avril.png';
 import ritaOra from './assets/card-rita.png';
 import duaLipa from './assets/card-dualipa.png';
-import cocacola from './assets/ads/cocacola.png';
+import cocacola from './assets/ads/coca-cola.png';
 import heineken from './assets/ads/heineken.png';
 import maneskin from './assets/card-maneskin.png';
 import coldplay from './assets/card-coldplay.png';
@@ -67,6 +67,21 @@ const firstBanner = [
   },
 ];
 
+const secondBanner = [
+  {
+    image: cocacola,
+    title: 'Next Generation',
+    buttonText: 'Explore Now',
+    brandColor: '#550C37',
+  },
+  {
+    image: heineken,
+    title: 'Premium Lager',
+    buttonText: 'Get a taste of Amsterdam',
+    brandColor: '#008234',
+  },
+];
+
 function App() {
   return (
     <main className="min-h-screen w-full max-w-[100vw] overflow-x-hidden flex flex-col">
@@ -91,7 +106,10 @@ function App() {
           title="Rock Singers"
         />
 
+        <SponsorBanner bannerData={secondBanner} />
+
         <LineUpSection artists={artistWatch} hasSponsor title="Watch Again" />
+
         <Footer />
       </div>
     </main>
