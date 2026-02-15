@@ -40,7 +40,7 @@ export function GenresSection() {
             Explore your favorite genres and discover new rhythms to love!
           </p>
         </div>
-        <button className="mt-4 w-[96px] h-[32px] !bg-primary !text-white !rounded-full text-xs font-medium !border-none shadow-lg flex items-center justify-center">
+        <button className="mt-4 w-[96px] h-[32px] !bg-[#E96744] hover:!bg-[#ff2828] !text-white !rounded-full text-xs font-medium !border-none shadow-lg flex items-center justify-center transition-colors transition-transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#E96744] focus:ring-offset-2 focus:ring-offset-black">
           <span className="whitespace-nowrap">See all</span>
         </button>
       </div>

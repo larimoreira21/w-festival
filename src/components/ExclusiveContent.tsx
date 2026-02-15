@@ -86,7 +86,7 @@ export function ExclusiveContent() {
           {images.map((item, index) => (
             <div
               key={`${item.name}-${index}`}
-              className="group/card cursor-pointer flex-shrink-0 snap-start"
+              className="group/card cursor-pointer flex-shrink-0 snap-start rounded-lg border-2 border-transparent hover:border-[#E96744] transition-colors duration-300"
             >
               <div className="w-[440px] h-[208px] min-w-[440px] min-h-[208px] box-content rounded-lg overflow-hidden relative border border-white/5">
                 <img

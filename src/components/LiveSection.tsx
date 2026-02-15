@@ -124,7 +124,7 @@ export function LiveSection() {
           {stages.map((stage, index) => (
             <div
               key={`${stage.name}-${index}`}
-              className="group/card cursor-pointer flex-shrink-0 bg-[#1a1a1a] rounded-lg overflow-hidden snap-start"
+              className="group/card cursor-pointer flex-shrink-0 bg-[#1a1a1a] rounded-lg overflow-hidden snap-start rounded-lg border-2 border-transparent hover:border-[#E96744] transition-colors duration-300"
             >
               <div className="relative w-[300px] sm:w-[440px] h-[160px] sm:h-[208px] overflow-hidden">
                 <img
