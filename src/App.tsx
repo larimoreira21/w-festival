@@ -4,11 +4,14 @@ import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { LineUpSection } from './components/LineUpSection';
 import { GenresSection } from './components/GenresSection';
+import { SponsorBanner } from './components/SponsorBanner';
 
 import alok from './assets/card-alok.png';
 import avril from './assets/card-avril.png';
 import ritaOra from './assets/card-rita.png';
 import duaLipa from './assets/card-dualipa.png';
+import cocacola from './assets/ads/cocacola.png';
+import heineken from './assets/ads/heineken.png';
 import maneskin from './assets/card-maneskin.png';
 import coldplay from './assets/card-coldplay.png';
 import dreamTheater from './assets/card-dream.png';
@@ -49,6 +52,21 @@ const artistWatch = [
   { name: 'Maneskin', image: maneskin },
 ];
 
+const firstBanner = [
+  {
+    image: heineken,
+    title: 'Premium Lager',
+    buttonText: 'Get a taste of Amsterdam',
+    brandColor: '#008234',
+  },
+  {
+    image: cocacola,
+    title: 'Next Generation',
+    buttonText: 'Explore Now',
+    brandColor: '#550C37',
+  },
+];
+
 function App() {
   return (
     <main className="min-h-screen w-full max-w-[100vw] overflow-x-hidden flex flex-col">
@@ -58,6 +76,8 @@ function App() {
         <LineUpSection artists={artistsLineUp} hasSponsor title="Line Up" />
 
         <GenresSection />
+
+        <SponsorBanner bannerData={firstBanner} />
 
         <LineUpSection
           artists={artistYesterday}
