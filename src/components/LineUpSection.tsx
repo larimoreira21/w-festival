@@ -2,7 +2,7 @@ import { useRef, useEffect } from 'react';
 import { InfiniteScroll } from './InfiniteScroll';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-import announcement from '../assets/announcement.png';
+import teslaAds from '../assets/ads/tesla.png';
 
 interface Artist {
   name: string;
@@ -72,8 +72,8 @@ export function LineUpSection({ artists, hasSponsor, title }: ArtistRowProps) {
           {hasSponsor && (
             <div
               className="flex-shrink-0 w-[440px] h-[288px] bg-card rounded-lg overflow-hidden border border-border flex flex-col items-center justify-center p-6 bg-center bg-no-repeat bg-contain scroll-snap-align-start relative"
-              style={{ backgroundImage: `url(${announcement})` }}
-            ></div>
+              style={{ backgroundImage: `url(${teslaAds})` }}
+            />
           )}
         </InfiniteScroll>
 
