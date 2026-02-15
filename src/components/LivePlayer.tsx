@@ -138,7 +138,7 @@ export function LivePlayer() {
         <div className="pointer-events-auto">
           <button
             type="button"
-            className="flex items-center gap-2 !bg-[#E96744] hover:!bg-[#ff2828] !text-white !rounded-full px-4 py-2 text-xs font-medium !border-none shadow-lg transition-colors transition-transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#E96744] focus:ring-offset-2 focus:ring-offset-black"
+            className="flex items-center gap-2 !bg-accent hover:!bg-accent-hover !text-white !rounded-full px-4 py-2 text-xs font-medium !border-none shadow-lg transition-colors transition-transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-black"
           >
             <Camera className="w-4 h-4 shrink-0" aria-hidden />
             <span className="whitespace-nowrap">Choose your camera</span>

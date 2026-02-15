@@ -56,7 +56,7 @@ export function LineUpSection({ artists, hasSponsor, title }: ArtistRowProps) {
           {artists.map((artist, index) => (
             <div
               key={`${artist.name}-${index}`}
-              className="flex-shrink-0 w-[208px] group/item cursor-pointer scroll-snap-align-start rounded-lg border-2 border-transparent hover:border-[#E96744] transition-colors duration-300"
+              className="flex-shrink-0 w-[208px] group/item cursor-pointer scroll-snap-align-start rounded-lg border-2 border-transparent hover:border-accent transition-colors duration-300"
             >
               <div className="relative h-[288px] rounded-lg overflow-hidden bg-muted">
                 <img
@@ -71,7 +71,7 @@ export function LineUpSection({ artists, hasSponsor, title }: ArtistRowProps) {
 
           {hasSponsor && (
             <div
-              className="flex-shrink-0 w-[440px] h-[288px] bg-card rounded-lg overflow-hidden border border-border flex flex-col items-center justify-center p-6 bg-center bg-no-repeat bg-contain scroll-snap-align-start relative rounded-lg border-2 border-transparent hover:border-[#E96744] transition-colors duration-300"
+              className="flex-shrink-0 w-[440px] h-[288px] bg-card rounded-lg overflow-hidden border border-border flex flex-col items-center justify-center p-6 bg-center bg-no-repeat bg-contain scroll-snap-align-start relative rounded-lg border-2 border-transparent hover:border-accent transition-colors duration-300"
               style={{ backgroundImage: `url(${teslaAds})` }}
             />
           )}
