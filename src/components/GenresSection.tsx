@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-import { Button } from './ui';
+import { Button, Card } from './ui';
 
 import appleAds from '../assets/ads/airpods.png';
 import pop from '../assets/genres/genre-pop.png';
@@ -92,14 +92,15 @@ function GenreCard({
   genre: { name: string; color: string; url: string };
 }) {
   return (
-    <div
-      className={`${genre.color} flex-shrink-0 w-[208px] h-[208px] rounded-xl p-5 aspect-square sm:aspect-[4/3] flex flex-col justify-end cursor-pointer hover:brightness-110 transition-all snap-center relative overflow-hidden group`}
+    <Card
+      variant="genre"
+      className={`${genre.color} w-[208px] h-[208px] p-5 aspect-square sm:aspect-[4/3] flex flex-col justify-end group`}
     >
       <img
         src={genre.url}
         alt={genre.name}
-        className="absolute inset-0 object-cover h-full w-full group-hover/item:scale-110 transition-transform duration-500"
+        className="absolute inset-0 object-cover h-full w-full group-hover:scale-110 transition-transform duration-500"
       />
-    </div>
+    </Card>
   );
 }

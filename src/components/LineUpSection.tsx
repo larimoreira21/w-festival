@@ -2,6 +2,7 @@ import { useRef, useEffect } from 'react';
 import { InfiniteScroll } from './InfiniteScroll';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
+import { Card, CardMedia } from './ui';
 import teslaAds from '../assets/ads/tesla.png';
 
 interface Artist {
@@ -54,24 +55,26 @@ export function LineUpSection({ artists, hasSponsor, title }: ArtistRowProps) {
 
         <InfiniteScroll scrollRef={scrollRef} gap="gap-4">
           {artists.map((artist, index) => (
-            <div
+            <Card
               key={`${artist.name}-${index}`}
-              className="flex-shrink-0 w-[208px] group/item cursor-pointer scroll-snap-align-start rounded-lg border-2 border-transparent hover:border-accent transition-colors duration-300"
+              variant="interactive"
+              className="w-[208px] group/item scroll-snap-align-start"
             >
-              <div className="relative h-[288px] rounded-lg overflow-hidden bg-muted">
-                <img
+              <div className="h-[288px]">
+                <CardMedia
                   src={artist.image}
                   alt={artist.name}
-                  className="absolute inset-0 object-cover h-full w-full group-hover/item:scale-110 transition-transform duration-500"
+                  overlay="gradient"
+                  groupHover="item"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
               </div>
-            </div>
+            </Card>
           ))}
 
           {hasSponsor && (
-            <div
-              className="flex-shrink-0 w-[440px] h-[288px] bg-card rounded-lg overflow-hidden border border-border flex flex-col items-center justify-center p-6 bg-center bg-no-repeat bg-contain scroll-snap-align-start relative rounded-lg border-2 border-transparent hover:border-accent transition-colors duration-300"
+            <Card
+              variant="sponsor"
+              className="w-[440px] h-[288px]"
               style={{ backgroundImage: `url(${teslaAds})` }}
             />
           )}

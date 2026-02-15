@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
+import { Card, CardMedia } from './ui';
 import image1 from '../assets/artists/demi-lovato.png';
 import image2 from '../assets/artists/demi-lovato2.png';
 import image3 from '../assets/artists/demi-lovato3.png';
@@ -122,17 +123,15 @@ export function LiveSection() {
           className="flex gap-4 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory"
         >
           {stages.map((stage, index) => (
-            <div
-              key={`${stage.name}-${index}`}
-              className="group/card cursor-pointer flex-shrink-0 bg-card-dark rounded-lg overflow-hidden snap-start rounded-lg border-2 border-transparent hover:border-accent transition-colors duration-300"
-            >
+            <Card key={`${stage.name}-${index}`} variant="interactiveDark">
               <div className="relative w-[300px] sm:w-[440px] h-[160px] sm:h-[208px] overflow-hidden">
-                <img
+                <CardMedia
                   src={stage.image}
                   alt={stage.name}
-                  className="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500"
+                  overlay="dark"
+                  groupHover="card"
+                  className="group-hover/card:scale-105"
                 />
-                <div className="absolute inset-0 bg-black/20" />
               </div>
 
               <div className="p-4 flex flex-col gap-3">
@@ -157,7 +156,7 @@ export function LiveSection() {
                   </span>
                 </div>
               </div>
-            </div>
+            </Card>
           ))}
         </div>
 
