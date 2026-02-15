@@ -10,11 +10,11 @@ import { SponsorBanner } from './components/SponsorBanner';
 import { ExclusiveContent } from './components/ExclusiveContent';
 
 import alok from './assets/cards/card-alok.png';
+import heineken from './assets/ads/heineken.png';
 import avril from './assets/cards/card-avril.png';
+import cocacola from './assets/ads/coca-cola.png';
 import ritaOra from './assets/cards/card-rita.png';
 import duaLipa from './assets/cards/card-dualipa.png';
-import cocacola from './assets/ads/coca-cola.png';
-import heineken from './assets/ads/heineken.png';
 import maneskin from './assets/cards/card-maneskin.png';
 import coldplay from './assets/cards/card-coldplay.png';
 import dreamTheater from './assets/cards/card-dream.png';

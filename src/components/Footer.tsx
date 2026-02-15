@@ -19,8 +19,8 @@ const socialMedia = [
 
 export function Footer() {
   return (
-    <footer className="flex border-t border-border mt-8 mb-8 justify-between">
-      <div className="px-3 sm:px-4 lg:px-8 py-4 sm:py-6">
+    <footer className="flex flex-col border-t border-border mt-8 mb-8 gap-6 lg:flex-row lg:justify-between lg:gap-0">
+      <div className="px-3 sm:px-4 lg:px-8 py-4 sm:py-6 order-2 lg:order-1">
         <div className="mb-10">
           <p className="text-xs sm:text-xs leading-relaxed max-w-4xl">
             Seek the Festival Guidance Rating. All rights reserved. May is used
@@ -62,7 +62,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="px-3 sm:px-4 lg:px-8 py-4 sm:py-6">
+      <div className="px-3 sm:px-4 lg:px-8 py-4 sm:py-6 order-1 lg:order-2">
         <div className="flex flex-col items-start lg:items-end gap-3">
           <div className="flex items-center gap-2">
             <img

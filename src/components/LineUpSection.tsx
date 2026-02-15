@@ -1,4 +1,5 @@
 import { Card, CardMedia, HorizontalScrollSection } from './ui';
+
 import teslaAds from '../assets/ads/tesla.png';
 
 interface Artist {

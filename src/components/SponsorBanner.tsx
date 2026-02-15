@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
+
 import { colors } from '../theme';
 
 interface bannerData {
@@ -66,7 +67,8 @@ export function SponsorBanner({ bannerData }: sponsorData) {
             }`}
             style={{
               padding: 0,
-              backgroundColor: index === currentIndex ? colors.muted : colors.white,
+              backgroundColor:
+                index === currentIndex ? colors.muted : colors.white,
             }}
             aria-label={`Go to slide ${index + 1}`}
           />

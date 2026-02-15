@@ -8,6 +8,7 @@ import {
   User,
   X,
 } from 'lucide-react';
+
 import logo from '../assets/logo.png';
 
 export function Navbar() {
