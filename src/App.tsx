@@ -90,7 +90,7 @@ function App() {
     <main className="min-h-screen w-full max-w-[100vw] overflow-x-hidden flex flex-col">
       <Navbar />
 
-      <div className="pt-14 w-full">
+      <div className="pt-17 w-full bg-[#1E1E22]">
         <LivePlayer />
 
         <LineUpSection artists={artistsLineUp} hasSponsor title="Line Up" />
@@ -118,7 +118,9 @@ function App() {
         <SponsorBanner bannerData={secondBanner} />
 
         <LineUpSection artists={artistWatch} hasSponsor title="Watch Again" />
+      </div>
 
+      <div className="bg-[#1E1E22] pb-40 md:pb-0">
         <Footer />
       </div>
     </main>
