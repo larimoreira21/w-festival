@@ -1,9 +1,9 @@
-import { Button, Card, HorizontalScrollSection } from './ui';
+import { Button, Card, HorizontalScrollSection } from '@/components/ui';
 
-import appleAds from '../assets/ads/airpods.png';
-import pop from '../assets/genres/genre-pop.png';
-import rock from '../assets/genres/genre-rock.png';
-import funk from '../assets/genres/genre-funk.png';
+import appleAds from '@/assets/ads/airpods.png';
+import pop from '@/assets/genres/genre-pop.png';
+import rock from '@/assets/genres/genre-rock.png';
+import funk from '@/assets/genres/genre-funk.png';
 
 const genres = [
   { name: 'Rock', color: 'bg-blue-800', url: rock },

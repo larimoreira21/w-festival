@@ -1,8 +1,8 @@
-import { Card, HorizontalScrollSection } from './ui';
+import { Card, HorizontalScrollSection } from '@/components/ui';
 
-import exclusiveContent from '../assets/exclusive/exclusive-content1.jpg';
-import exclusiveContent2 from '../assets/exclusive/exclusive-content2.jpg';
-import exclusiveContent3 from '../assets/exclusive/exclusive-content3.png';
+import exclusiveContent from '@/assets/exclusive/exclusive-content1.jpg';
+import exclusiveContent2 from '@/assets/exclusive/exclusive-content2.jpg';
+import exclusiveContent3 from '@/assets/exclusive/exclusive-content3.png';
 
 const images = [
   {

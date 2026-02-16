@@ -1,12 +1,12 @@
-import logo from '../assets/logo.png';
-import apple from '../assets/social-media/apple.png';
-import tiktok from '../assets/social-media/tiktok.svg';
-import twitter from '../assets/social-media/twitter.svg';
-import youtube from '../assets/social-media/youtube.svg';
-import facebook from '../assets/social-media/facebook.svg';
-import linkedin from '../assets/social-media/linkedin.svg';
-import instagram from '../assets/social-media/instagram.svg';
-import googlePlay from '../assets/social-media/google-play.png';
+import logo from '@/assets/logo.png';
+import apple from '@/assets/social-media/apple.png';
+import tiktok from '@/assets/social-media/tiktok.svg';
+import twitter from '@/assets/social-media/twitter.svg';
+import youtube from '@/assets/social-media/youtube.svg';
+import facebook from '@/assets/social-media/facebook.svg';
+import linkedin from '@/assets/social-media/linkedin.svg';
+import instagram from '@/assets/social-media/instagram.svg';
+import googlePlay from '@/assets/social-media/google-play.png';
 
 const socialMedia = [
   { name: 'youtube', url: youtube },

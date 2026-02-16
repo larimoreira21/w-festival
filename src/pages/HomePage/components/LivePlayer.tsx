@@ -8,9 +8,9 @@ import {
   Grid2X2,
 } from 'lucide-react';
 
-import { Button, DropdownButton } from './ui';
+import { Button, DropdownButton } from '@/components/ui';
 
-import avrilVideo from '../assets/videos/avril-lavigne.mp4';
+import avrilVideo from '@/assets/videos/avril-lavigne.mp4';
 
 const PLAYBACK_SPEEDS = [1, 1.25, 1.5, 1.75, 2] as const;
 

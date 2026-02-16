@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 
-import { colors } from '../theme';
+import { colors } from '@/theme';
 
 interface bannerData {
   image: string;

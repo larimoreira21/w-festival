@@ -1,6 +1,6 @@
-import { Card, CardMedia, HorizontalScrollSection } from './ui';
+import { Card, CardMedia, HorizontalScrollSection } from '@/components/ui';
 
-import teslaAds from '../assets/ads/tesla.png';
+import teslaAds from '@/assets/ads/tesla.png';
 
 interface Artist {
   name: string;

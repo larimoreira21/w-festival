@@ -1,8 +1,8 @@
-import { Card, CardMedia, HorizontalScrollSection } from './ui';
+import { Card, CardMedia, HorizontalScrollSection } from '@/components/ui';
 
-import image1 from '../assets/artists/demi-lovato.png';
-import image2 from '../assets/artists/demi-lovato2.png';
-import image3 from '../assets/artists/demi-lovato3.png';
+import image1 from '@/assets/artists/demi-lovato.png';
+import image2 from '@/assets/artists/demi-lovato2.png';
+import image3 from '@/assets/artists/demi-lovato3.png';
 
 const stages = [
   {

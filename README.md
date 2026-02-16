@@ -5,17 +5,6 @@ The application displays a horizontally scrollable festival webpage with smooth 
 
 ---
 
-## 📲 Features
-
-- Horizontal scrolling watch gallery
-- Responsive layout (desktop & mobile)
-- Modern UI styled with Tailwind CSS
-- Icon set powered by Lucide
-- Fast performance with Vite
-- Type-safe codebase using TypeScript
-
----
-
 ## 🚀 Tech Stack
 
 - React 19
@@ -71,15 +60,36 @@ npm run preview
 
 ## 📁 Project Structure
 
+Imports use the `@/` alias (e.g. `@/components/ui`, `@/theme`).
+
 ```
 src
-│
-├─ components/          # Reusable UI components
-├─ assets/              # Images and icons
-│
-├─ index.css            # Global styles
-├─ App.tsx              # Root component
-└─ main.tsx             # Entry point
+├── components/
+│   ├── ui/                    # Design system
+│   │   ├── Button.tsx
+│   │   ├── Card.tsx
+│   │   ├── CardMedia.tsx
+│   │   ├── HorizontalScrollSection.tsx
+│   │   └── index.ts
+│   ├── Navbar/
+│   │   ├── index.tsx
+│   │   └── components/
+│   └── Footer/
+│       └── index.tsx
+├── pages/
+│   └── HomePage/
+│       ├── index.tsx          # Page composition
+│       ├── components/        # Section components
+│       └── helpers/           # Page-level helpers
+├── theme/
+│   ├── colors.ts
+│   └── index.ts
+├── helpers/
+│   └── theme.ts
+├── assets/                     # Images and icons
+├── index.css                   # Global styles
+├── App.tsx                     # Root layout & routing
+└── main.tsx                    # Entry point
 ```
 
 ---
@@ -111,5 +121,5 @@ Icons are provided by **Lucide React**.
 
 ## ⚙️ Requirements
 
-- Node.js 18+
+- Node.js 20.x+
 - npm 9+
