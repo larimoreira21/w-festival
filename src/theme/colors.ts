@@ -9,6 +9,7 @@ export const colors = {
   live: '#FF6347',
   muted: '#636363',
   white: '#FFFFFF',
+  orange: '#E96744',
   sponsor: {
     heineken: '#008234',
     cocacola: '#550C37',

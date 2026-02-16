@@ -60,15 +60,17 @@ export function SponsorBanner({ bannerData }: sponsorData) {
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-2 h-2 rounded-full border-0 block cursor-pointer transition-all duration-300 focus:outline-none ${
+            className={`w-2 h-2 rounded-full border-0 block cursor-pointer transition-all duration-300 focus:outline-none hover:scale-150 ${
               index === currentIndex
-                ? 'bg-white'
-                : 'bg-white/40 hover:bg-white/70'
+                ? 'bg-orange-500 scale-150'
+                : 'bg-orange-500/40 hover:bg-orange-500/70'
             }`}
             style={{
               padding: 0,
               backgroundColor:
-                index === currentIndex ? colors.muted : colors.white,
+                index === currentIndex
+                  ? colors.accent
+                  : 'rgba(233, 103, 68, 0.4)',
             }}
             aria-label={`Go to slide ${index + 1}`}
           />
