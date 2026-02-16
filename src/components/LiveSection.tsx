@@ -88,7 +88,7 @@ export function LiveSection() {
     <HorizontalScrollSection
       title="In Live"
       titleVariant="compact"
-      sectionClassName="px-3 sm:px-4 lg:px-8 py-6 sm:py-8"
+      sectionClassName="pl-3 sm:pl-4 lg:pl-8 py-6 sm:py-8"
       items={items}
       scrollContainerClassName="flex gap-4 pb-4"
     />

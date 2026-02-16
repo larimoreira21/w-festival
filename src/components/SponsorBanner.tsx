@@ -33,14 +33,14 @@ export function SponsorBanner({ bannerData }: sponsorData) {
       {bannerData.map((banner, index) => (
         <div
           key={index}
-          className={`absolute inset-0 p-[32px] transition-opacity duration-1000 ease-in-out ${
+          className={`absolute inset-0 p-[18px] md:p-[32px] transition-opacity duration-1000 ease-in-out ${
             index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
           }`}
         >
           <img
             src={banner.image}
             alt={banner.title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-fill md:object-cover"
           />
           <div className="absolute inset-0 bg-black/15" />
         </div>

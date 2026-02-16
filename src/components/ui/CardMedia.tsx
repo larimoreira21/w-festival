@@ -6,6 +6,7 @@ type CardMediaOverlay = 'gradient' | 'dark' | 'none';
 interface CardMediaProps extends ImgHTMLAttributes<HTMLImageElement> {
   overlay?: CardMediaOverlay;
   groupHover?: string;
+  hasTitle?: boolean;
 }
 
 const overlayClasses: Record<CardMediaOverlay, string> = {
@@ -19,6 +20,7 @@ export function CardMedia({
   overlay = 'gradient',
   groupHover = 'item',
   className,
+  hasTitle = false,
   ...imgProps
 }: CardMediaProps) {
   const hoverPrefix = groupHover ? `group-hover/${groupHover}:` : '';
@@ -42,6 +44,17 @@ export function CardMedia({
           )}
           aria-hidden
         />
+      )}
+
+      <div
+        className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent pointer-events-none"
+        aria-hidden
+      />
+
+      {imgProps.alt && hasTitle && (
+        <span className="absolute bottom-7 left-0 right-0 pb-4 text-center text-white text-lg font-bold drop-shadow-lg z-10">
+          {imgProps.alt}
+        </span>
       )}
     </div>
   );

@@ -27,6 +27,7 @@ export function LineUpSection({ artists, hasSponsor, title }: ArtistRowProps) {
             alt={artist.name}
             overlay="gradient"
             groupHover="item"
+            hasTitle
           />
         </div>
       </Card>

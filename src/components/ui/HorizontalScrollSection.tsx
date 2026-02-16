@@ -91,7 +91,7 @@ export function HorizontalScrollSection({
 }: HorizontalScrollSectionProps) {
   const sectionClassNameResolved =
     sectionClassName ??
-    'relative px-3 sm:px-4 lg:px-8 py-6 sm:py-8 overflow-x-clip';
+    'relative pl-3 sm:pl-4 lg:pl-8 py-6 sm:py-8 overflow-x-clip';
 
   const mouseDrag = useMouseDrag();
 

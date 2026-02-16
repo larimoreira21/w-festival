@@ -23,7 +23,7 @@ export function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-transparent backdrop-blur">
-      <div className="flex items-center justify-between md:justify-start flex-nowrap px-4 lg:px-4 h-12 sm:h-[64px] max-w-[1440px] mx-auto">
+      <div className="flex items-center justify-between md:justify-start flex-nowrap px-4 lg:px-4 h-12 sm:h-[64px]">
         <div className="flex items-center shrink-0 mr-8">
           <a href="/" className="flex items-center">
             <img src={logo} alt="Logo" className="w-32 sm:w-40" />
@@ -69,7 +69,7 @@ export function Navbar() {
             />
           </nav>
 
-          <div className="flex items-center gap-3 mt-2">
+          <div className="flex items-center mt-2">
             <ProfileDropdown name="Peter Parker" />
 
             <button

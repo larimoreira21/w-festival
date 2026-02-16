@@ -22,7 +22,7 @@ export function GenresSection() {
   const adItem = {
     id: 'genre-ad',
     content: (
-      <div className="flex-shrink-0 w-[440px] h-[208px] min-w-[440px] min-h-[208px] box-content bg-black rounded-xl overflow-hidden border border-border relative snap-center">
+      <div className="flex-shrink-0 w-[350px] md:w-[440px] h-[208px] min-w-[350px] md:min-w-[440px] min-h-[208px] box-content bg-black rounded-xl overflow-hidden border border-border relative snap-center">
         <img
           src={appleAds}
           alt="Airpods Ads"
@@ -41,7 +41,7 @@ export function GenresSection() {
 
   return (
     <HorizontalScrollSection
-      sectionClassName="px-3 sm:px-4 lg:px-8 py-6 sm:py-8"
+      sectionClassName="pl-3 sm:pl-4 lg:pl-8 py-6 sm:py-8"
       items={items}
       scrollContainerClassName="flex gap-4 pb-4"
       sidebar={

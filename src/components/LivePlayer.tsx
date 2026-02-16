@@ -99,7 +99,7 @@ export function LivePlayer() {
       ref={containerRef}
       role="region"
       aria-label="Live video player"
-      className="relative w-full aspect-video max-h-[85vh] bg-black overflow-hidden shadow-2xl"
+      className="relative w-full aspect-video h-[130vh] bg-black overflow-hidden shadow-2xl"
     >
       <div className="absolute inset-0">
         <video
@@ -136,7 +136,7 @@ export function LivePlayer() {
         </p>
       </div>
 
-      <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between z-10 pointer-events-none">
+      <div className="absolute bottom-30 left-6 right-6  flex items-end justify-between z-10 pointer-events-none">
         <div className="pointer-events-auto">
           <Button
             variant="primary"

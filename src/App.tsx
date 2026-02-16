@@ -50,7 +50,7 @@ const artistRockSingers = [
 
 const artistWatch = [
   { name: 'Alok', image: alok },
-  { name: 'Rita oRA', image: ritaOra },
+  { name: 'Rita Ora', image: ritaOra },
   { name: 'Dua Lipa', image: duaLipa },
   { name: 'Maneskin', image: maneskin },
 ];
@@ -120,7 +120,7 @@ function App() {
         <LineUpSection artists={artistWatch} hasSponsor title="Watch Again" />
       </div>
 
-      <div className="bg-[#1E1E22] pb-40 md:pb-0">
+      <div className="bg-[#1E1E22]">
         <Footer />
       </div>
     </main>
