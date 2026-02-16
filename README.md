@@ -1,73 +1,115 @@
-# React + TypeScript + Vite
+# 🎸 W-Festival Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive festival webpage interface built with React, Vite, and Tailwind CSS.  
+The application displays a horizontally scrollable festival webpage with smooth navigation, clean UI components, and a responsive layout.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📲 Features
 
-## React Compiler
+- Horizontal scrolling watch gallery
+- Responsive layout (desktop & mobile)
+- Modern UI styled with Tailwind CSS
+- Icon set powered by Lucide
+- Fast performance with Vite
+- Type-safe codebase using TypeScript
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🚀 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 19
+- TypeScript
+- Vite 7
+- Tailwind CSS 4
+- Lucide React
+- React Horizontal Scrolling Menu
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📦 Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+```bash
+git clone larimoreira21/w-festival
+cd watch-project
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+## 💻 Development
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+Start the development server:
+
+```bash
+npm run dev
 ```
+
+The app will be available at:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 🏗️ Production Build
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+---
+
+## 📁 Project Structure
+
+```
+src
+│
+├─ components/          # Reusable UI components
+├─ assets/              # Images and icons
+│
+├─ index.css            # Global styles
+├─ App.tsx              # Root component
+└─ main.tsx             # Entry point
+```
+
+---
+
+## 🎨 Styling
+
+The UI is built with **Tailwind CSS v4** using utility-first classes and responsive design patterns.  
+Custom tokens and opacity utilities are used to achieve modern overlay and glass effects.
+
+---
+
+## 🎯 Icons
+
+Icons are provided by **Lucide React**.
+
+---
+
+## 🗒️ Available Scripts
+
+| Script            | Description                        |
+| ----------------- | ---------------------------------- |
+| `npm run dev`     | Start development server           |
+| `npm run build`   | TypeScript + Vite production build |
+| `npm run preview` | Preview production build           |
+| `npm run lint`    | Run ESLint                         |
+| `npm run format`  | Format code with Prettier          |
+
+---
+
+## ⚙️ Requirements
+
+- Node.js 18+
+- npm 9+
